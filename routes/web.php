@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ContactController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -19,4 +20,10 @@ Route::get('/', function () {
 
 Route::get('/home', function () {
     return redirect('/dashboard');
+});
+
+Route::get('/contact-controller', [ContactController::class]);
+
+Route::get('/registration', function(){
+    return view('registration_form');
 });
